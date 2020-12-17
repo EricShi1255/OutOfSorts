@@ -5,7 +5,7 @@ public class Sorts{
     */
     public static void bubbleSort(int[] data) {
       boolean prevListSwap = true;
-      while (prevListSwap) {
+      while (prevListSwap && (data.length != 0)) {
         boolean swapped = false; 
         for (int i = 0; i < data.length-1; i++) {   
           if (data[i] > data[i+1]) {
