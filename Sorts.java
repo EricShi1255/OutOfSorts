@@ -41,4 +41,25 @@ public class Sorts{
       data[minpos] = temp;
       }
     }
+
+    public static void insertionSort(int[] data){
+      for (int i = 1; i < data.length; i++) {
+        for (int j = i-1; i > 0; j--) {
+          if (data[i] > data[j]) {
+            int temp = data[i];
+            int temp2 = data[j];
+            //move everything up 1 pos (j & up)
+            data[j] = data[i];
+            for (int k = j; k < data.length; k++) {
+              int prev = data[k-1];
+              int curr = data[k];
+              data[k] = prev;
+              prev = curr;
+            }
+
+
+          }
+        }
+      }
+    }
 }
