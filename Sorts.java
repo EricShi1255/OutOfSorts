@@ -23,14 +23,13 @@ public class Sorts{
       }
     }
     public static void selectionSort(int[] data){
-      System.out.println(Arrays.toString(data));
       int i;
       int j;
       for (i = 0; i < data.length-1; i++) {
         int min = data[i];
         int minpos = i;
         //find the min
-        for (j = i; j < data.length-1; j++) {
+        for (j = i; j < data.length; j++) {
           if (data[j] < min) {
             min = data[j];
             minpos = j;
@@ -40,7 +39,6 @@ public class Sorts{
       int temp = data[i];
       data[i] = min;
       data[minpos] = temp;
-      System.out.println(Arrays.toString(data));
       }
     }
 }
