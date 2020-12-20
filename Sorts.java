@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 public class Sorts{
     /**Bubble sort of an int array. 
     *Upon completion, the elements of the array will be in increasing order.
@@ -44,16 +45,18 @@ public class Sorts{
    
 
   public static void insertionSort(int[] data){
+
     for (int i = 1; i < data.length; i++) {
       int key = data[i];
       int j = i-1;
-      int prev = data[j];
-      while (key < prev && j > 0) {
+      while ((key < data[j]) && (j >= 0)) {
+        data[j+1] = data[j];
         j--;
-        data[i+1] = data[i];
       }
-      data[j] = key;
+      data[j+1] = key;
     }
- 
+  
   }
+
+
 }
