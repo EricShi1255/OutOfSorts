@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Sorts{
     /**Bubble sort of an int array. 
     *Upon completion, the elements of the array will be in increasing order.
@@ -22,22 +23,24 @@ public class Sorts{
       }
     }
     public static void selectionSort(int[] data){
-      for (int i = 1; i < data.length-1; i++) {
+      System.out.println(Arrays.toString(data));
+      int i;
+      int j;
+      for (i = 0; i < data.length-1; i++) {
         int min = data[i];
         int minpos = i;
-        int j;
         //find the min
         for (j = i; j < data.length-1; j++) {
           if (data[j] < min) {
             min = data[j];
             minpos = j;
-
           }
         }
       //send min to the front
       int temp = data[i];
-      data[i] = j;
+      data[i] = min;
       data[minpos] = temp;
+      System.out.println(Arrays.toString(data));
       }
     }
 }
