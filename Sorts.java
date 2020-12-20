@@ -27,7 +27,7 @@ public class Sorts{
         int minpos = i;
         int j;
         //find the min
-        for (j = 0; j < data.length-1; j++) {
+        for (j = i; j < data.length-1; j++) {
           if (data[j] < min) {
             min = data[j];
             minpos = j;
