@@ -45,17 +45,15 @@ public class Sorts{
    
 
   public static void insertionSort(int[] data){
-
-    for (int i = 1; i < data.length; i++) {
-      int key = data[i];
-      int j = i-1;
-      while ((key < data[j]) && (j >= 0)) {
-        data[j+1] = data[j];
-        j--;
-      }
-      data[j+1] = key;
-    }
-  
+    for (int i = 1; i < data.length; i++) {  
+      int key = data[i];  
+      int j = i - 1;  
+      while ( (j > -1) && ( data[j] > key ) ) {  
+        data[j+1] = data[j];  
+        j--;  
+      }  
+      data[j + 1] = key;  
+    }  
   }
 
 
