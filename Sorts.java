@@ -46,13 +46,14 @@ public class Sorts{
   public static void insertionSort(int[] data){
     for (int i = 1; i < data.length; i++) {
       int key = data[i];
-      for (int j = i-1; j > 0; j--) {
-        if (key > data[j]) {
-          //move greater elements up too make space
-          data[j+1] = data[j];
-        }
+      int j = i-1;
+      int prev = data[j];
+      while (key < prev && j > 0) {
+        j--;
+        data[i+1] = data[i];
       }
-      data[i] = key;
+      data[j] = key;
     }
+ 
   }
 }
