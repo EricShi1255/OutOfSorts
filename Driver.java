@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 public class Driver{
   public static void main(String[]args){
     if(args.length < 2){
@@ -8,25 +9,25 @@ public class Driver{
     }else{
 
       int[] randData = new int[Integer.parseInt(args[0])];
-      for (int i = 0; i < randData.size; i++) {
+      for (int i = 0; i < randData.length; i++) {
         Random r = new Random();
         int random = r.nextInt(100);
         randData[i] = random;
-    }
+      }
 
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
-        randData = randData;
+          //nothing
       }else if(args[2].equals("equal")){
 	    for (int i = 0; i < randData.length; i++) {
             randData[i] = 0;
         }
       }else if(args[2].equals("sorted")){
-        randData = Arrays.sort(randData);
+        Arrays.sort(randData);
       }else if(args[2].equals("reversed")){
         
-        randData = Arrays.sort(randData);
-        int[] tempData = randData.length;
+        Arrays.sort(randData);
+        int[] tempData = new int[randData.length];
         int j = 0;
         for (int i = randData.length-1; i > 0; i--) {
             tempData[j] = randData[i];
@@ -34,6 +35,8 @@ public class Driver{
         }
         randData = tempData;
       }
+
+
 
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
@@ -78,3 +81,4 @@ public class Driver{
       }
     }
   }
+}
