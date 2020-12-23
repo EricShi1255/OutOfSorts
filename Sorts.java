@@ -52,7 +52,7 @@ public class Sorts{
         data[j+1] = data[j];  
         j--;  
       }  
-      data[j + 1] = key;  
+      data[j+1] = key;  
     }  
   }
 

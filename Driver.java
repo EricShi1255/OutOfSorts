@@ -41,6 +41,7 @@ public class Driver{
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
       }
+
       else if(args[1].equals("selection")){
         Sorts.selectionSort(randData);
       }
